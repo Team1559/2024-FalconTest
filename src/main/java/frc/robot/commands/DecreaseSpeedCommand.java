@@ -8,7 +8,7 @@ import frc.robot.subsystems.Falcons;
 import edu.wpi.first.wpilibj2.command.Command;
 
 /** An example command that uses an example subsystem. */
-public class DecreaseSpeedCommad extends Command {
+public class DecreaseSpeedCommand extends Command {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Falcons m_subsystem;
 
@@ -17,7 +17,7 @@ public class DecreaseSpeedCommad extends Command {
    *
    * @param subsystem The subsystem used by this command.
    */
-  public DecreaseSpeedCommad(Falcons subsystem) {
+  public DecreaseSpeedCommand(Falcons subsystem) {
     m_subsystem = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
@@ -26,14 +26,12 @@ public class DecreaseSpeedCommad extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    m_subsystem.decrease();
-    //Decrease 
+    m_subsystem.decrease(); 
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_subsystem.increase();
   }
 
   // Called once the command ends or is interrupted.
@@ -43,6 +41,6 @@ public class DecreaseSpeedCommad extends Command {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return false;
+    return true;
   }
 }

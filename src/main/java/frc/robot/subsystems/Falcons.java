@@ -19,7 +19,8 @@ public class Falcons extends SubsystemBase {
   public Falcons() {
     motor1 = new TalonFX(19);
     motor2 = new TalonFX(17);
-    motor2.setInverted(true);
+    motor1.setInverted(true);
+    motor2.setInverted(false);
   }
 
   public void decrease() {

@@ -6,7 +6,7 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
-import frc.robot.commands.DecreaseSpeedCommad;
+import frc.robot.commands.DecreaseSpeedCommand;
 import frc.robot.commands.IncreaseSpeedCommand;
 import frc.robot.subsystems.Falcons;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -55,7 +55,7 @@ public class RobotContainer {
   private void configureBindings() {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
     m_driverController.a()
-        .onTrue(new DecreaseSpeedCommad(m_exampleSubsystem));
+        .onTrue(new DecreaseSpeedCommand(m_exampleSubsystem));
     m_driverController.b()
         .onTrue(new IncreaseSpeedCommand(m_exampleSubsystem));
 
